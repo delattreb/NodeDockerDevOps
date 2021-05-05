@@ -1,14 +1,17 @@
-version: "3"
+version: '3'
 services:
   node-app:
     container_name: node-app-dev
     build:
       context: .
-      args: 
+      args:
         NODE_ENV: development
+    ports:
+      - '3000:3000'
     volumes:
       - ./:/app
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - PORT=3000
     command: npm run dev

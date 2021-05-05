@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package.json .
  
 # condition
+ARG PORT
 ARG NODE_ENV
 RUN if ["$NODE_ENV" = development]; \
     then npm install; \
@@ -10,6 +11,5 @@ RUN if ["$NODE_ENV" = development]; \
     fi
 
 COPY . ./
-ENV PORT 3000
 EXPOSE $PORT
 CMD ["node", "index.js"]
