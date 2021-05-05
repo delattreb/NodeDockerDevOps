@@ -1,11 +1,14 @@
-version: "3"
+version: '3'
 services:
   node-app:
     container_name: node-app-prod
     build:
       context: .
-      args: 
+      args:
         NODE_ENV: production
+    ports:
+      - '4000:3000'
     environment:
       - NODE_ENV=production
+      - PORT=3000
     command: node index.js
