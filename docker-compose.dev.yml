@@ -1,4 +1,8 @@
 version: '3'
+
+volumes:
+  portainer_data:
+    
 services:
   node-app:
     container_name: node-app-dev
@@ -15,3 +19,17 @@ services:
       - NODE_ENV=development
       - PORT=3000
     command: npm run dev
+
+  portainer:
+    hostname: portainer
+    image: portainer/portainer-ce
+    ports:
+      - "9000:9000"
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints: [node.role == manager]  
+  
+  
