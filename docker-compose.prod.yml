@@ -2,6 +2,7 @@ version: "3"
 services:
   node-app:
     container_name: node-app-prod
+    hostname: node-app-prod
     build:
       context: .
       args:
