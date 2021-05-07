@@ -16,8 +16,16 @@ docker tag <image-source>[:TAG] <image-cible>[:TAG]
 docker scan <image>
 docker scan --json <image>
 ```
-# Reliquat
 
+# GitLab
+## Test API
+>Token:
+>Sp9ns2Pjrpwa7y3MqL9T
+```
+curl --header "PRIVATE-TOKEN: Sp9ns2Pjrpwa7y3MqL9T" "http://76msa-s-gitl-01.linkt.lan/api/v4/projects/16/repository/tags"
+```
+
+# Reliquat
 ## Bash
 ``` lang-sh
 docker exec -it node-app-dev bash
