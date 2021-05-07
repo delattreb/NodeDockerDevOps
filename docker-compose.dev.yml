@@ -6,6 +6,7 @@ volumes:
 services:
   node-app:
     container_name: node-app-dev
+    hostname: node-app-dev
     build:
       context: .
       args:
@@ -21,6 +22,7 @@ services:
     command: npm run dev
 
   portainer:
+    container_name: portainer
     hostname: portainer
     image: portainer/portainer-ce
     ports:
