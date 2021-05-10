@@ -1,3 +1,5 @@
+node_modules
+docker-compose*
 NodeDockerDevOps.code-workspace
 Dockerfile
 command.md
@@ -5,6 +7,10 @@ command.md
 .npm-debug.log
 .git
 .gitignore
-node_modules
-docker-compose*
+thunder*
 README.md
+testAPI.md
+vulnerabilities.json
+.eslintrc.json
+.prettierrc
+
