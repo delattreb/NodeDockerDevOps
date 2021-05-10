@@ -3,12 +3,13 @@
 
 ## Build image
 ``` lang-sh
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d 
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
 ```
 ## Préparation production
 ``` lang-sh
 docker tag <image-source>[:TAG] <image-cible>[:TAG]
+docker tag node-app-prod:latest node-app-prod:1.23
 ```
 # Scan
 ## Vulnerabilité

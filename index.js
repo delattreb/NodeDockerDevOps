@@ -4,11 +4,11 @@ const express = require("express");
 const app = express();
 const port = 3000; // process.env.PORT;
 
-const myObj = { name: "John", age: 35, car: null };
+const myObj = { name: "John", age: 30, car: null };
 
 // première route test
 app.get("/", (req, res) => {
-  res.send("<h2>Hi there!!!</h2>");
+  res.send("<h2>Hi there !!</h2>");
 });
 
 // seconde route test
