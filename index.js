@@ -1,19 +1,22 @@
-/* eslint-disable no-console */
-const express = require("express");
-
-const app = express();
-const port = 3000; // process.env.PORT;
-
-const myObj = { name: "John", age: 30, car: null };
-
-// première route test
-app.get("/", (req, res) => {
-  res.send("<h2>Hi there !!</h2>");
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = __importDefault(require("express"));
+var app = express_1.default();
+var port = 3000;
+var user = { name: "Bruno", age: 25, sex: "M" };
+var p1 = { id: 0, name: "Bruno", team: 56 };
+app.get("/", function (req, res) {
+    res.send("Hi there !");
 });
-
-// seconde route test
-app.get("/user", (req, res) => {
-  res.send(myObj);
+app.get("/user", function (req, res) {
+    res.send(user);
 });
-
-app.listen(port, () => console.log(`Server listen on port: ${port}`));
+app.get("/player", function (req, res) {
+    res.send(p1);
+});
+app.listen(port, function () {
+    return console.log("server is listening on " + port);
+});
