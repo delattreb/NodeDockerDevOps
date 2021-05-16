@@ -7,11 +7,11 @@ interface Player {
 
 const app = express();
 const port = 3000;
-let user = { name: "Bruno", age: 35, sex: "M" };
+let user = { name: "Bruno", age: 45, sex: "M" };
 let p1: Player = { id: 0, name: "Bruno", team: 56 };
 
 app.get("/", (req, res) => {
-  res.send("Hi there !");
+  res.send("Hi there Salut");
 });
 
 app.get("/user", (req, res) => {
